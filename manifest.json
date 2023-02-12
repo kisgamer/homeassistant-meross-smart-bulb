@@ -1,0 +1,25 @@
+{
+  "name": "Meross Smart Bulb",
+  "version": "0.1.0",
+  "description": "Home Assistant addon for Meross smart bulb integration.",
+  "dependencies": [
+    "python3",
+    "pip"
+  ],
+  "services": [
+    {
+      "name": "python3",
+      "executable": "python3",
+      "command": [
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "-r",
+        "/config/requirements.txt"
+      ]
+    }
+  ],
+  "config_flow": false,
+  "start_cmd": "python3 /config/meross_smart_bulb.py"
+}
